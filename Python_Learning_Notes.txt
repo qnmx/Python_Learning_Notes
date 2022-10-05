@@ -1,0 +1,87 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	Python Programming Learning Notes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# f-strings
+- Python formats the string by replacing the name of any variable in braces with its value.
+
+first_name = "name"
+last_name = "surname"
+full_name = f"{first_name} {last_name}"
+print(full_name.title())
+
+# Add tab to a string
+print("\tHello World!")
+
+# New lines
+print("Languages:\nPython\nC\nJava")
+print("Languages:\n\tPython\n\tC\n\tJava")
+
+# Eliminate whitespaces
+text = "whitespace "
+text.rstrip() - remove whitespace from right hand side of a string
+text.lstrip() - remove whitespace from left hand side of a string
+test.strip() - remove whitespace from left and right hand side
+
+- Text is only manipulated temporarily
+- Assosicate the stripped value with the variable name, for permanet result
+text = text.rstrip()
+
+# Undrscore in Numbers
+age = 10_000_000
+- use underscores when representing large number for better visibility
+
+# Multiple assignement
+a, b, c = 0, 1, 2
+
+# Constants
+- use CAPITAL letters to name the variable, that value should not be changed
+
+# Lists
+- In Python, square brackets [] indicate a list
+- Individual elements in the list are separated by commas
+
+# Accessing Elements in a List
+- To access an element in a list, write the name of the list followed by the index of the item enclosed in square brackets
+- By asking for the item at index -1, Python always returns the last item in the list
+- Sample code that creates list with FQDNs and attach them to the Palo Alto CLI style command
+
+FQDNS = ["google.com", "bbc.co.uk", "cisco.com"]
+palo_alto_obj = f"set address FQDN_{FQDNS[0]} fqdn {FQDNS[0]}"
+print(palo_alto_obj)
+
+# Appending Elements to the end of a list
+- use method append()
+nodes = ["SW1", "SW2", "SW3", "R1", "R2", "R3"]
+nodes.append("FG1")
+nodes.append("FG2")
+nodes.append("PA1")
+nodes.append("PA2")
+print(nodes)
+
+# Creating empy list and appending with the nodes
+nodes2 = []
+nodes2.append("SV1")
+nodes2.append("SV2")
+nodes2.append("SV3")
+print(nodes2)
+
+# Insert element into a list
+nodes2.insert(0, "SV01")
+print(nodes2)
+
+# Removing an item using the del statement
+del nodes2[1]
+print(nodes2)
+
+# pop() Method
+print(nodes2)
+
+popped_nodes = nodes2.pop()
+print(nodes2)
+print(popped_nodes)
+
+# Remove an item by a value
+nodes2.remove("SV1")
+
+
