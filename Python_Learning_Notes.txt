@@ -22,10 +22,19 @@ Sample: node02.upper()
 - Using keyword arguments with the print() function
   end=''
   sep=''
+- Sample for sep=''
+  print("IP", "address", "is", "1.2.3.4", sep="***")
+
+- Conversion specifiers
+  print("Your %s address is: %s and there are %d toal IPs in use" % ("IP", "1.2.3.4", 99))
 
 - The format() method
   print('{0} {1} {2}'.format('a', 'b', 'c'))
-
+- Allocate spaces to the object (Right justification by default)
+  print('{0:5} {1:10} {2:15}'.format('a', 'b', 'c'))
+  Left justification 
+  print('{0:>5} {1:>10} {2:>15}'.format('a', 'b', 'c'))
+  
 # f-strings
 - Python formats the string by replacing the name of any variable in braces with its value.
 
@@ -60,6 +69,20 @@ a, b, c = 0, 1, 2
 
 # Constants
 - use CAPITAL letters to name the variable, that value should not be changed
+
+# Mutable vs. Immutable
+- Mutable
+  Can be changed in place
+  list, dict, set and bytearray
+
+- Immutable
+  Cannot be changed in place
+  string, int, float, decimal, complex, bool, tuple, range, bytes
+
+# User Input
+- input() function
+  input("Enter your name: ")
+- Return an object of data type string
 
 # Lists
 - In Python, square brackets [] indicate a list
