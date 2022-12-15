@@ -34,7 +34,15 @@ Sample: node02.upper()
   print('{0:5} {1:10} {2:15}'.format('a', 'b', 'c'))
   Left justification 
   print('{0:>5} {1:>10} {2:>15}'.format('a', 'b', 'c'))
-  
+
+- format() method and binary numbers
+  '{0:b}'.format(170) - returns string '10101010'
+- pad the beginning
+  '{0:08b}'.format(17)
+- Sample for printing binary address
+  print('The IPv4 address {0} in dotted binary notation is {1:08b}.{2:08b}.{3:08b}.{4:08b}'.format('1.1.1.1', 1, 1, 1, 1 ))
+  The IPv4 address 1.1.1.1 in dotted binary notation is 00000001.00000001.00000001.00000001
+
 # f-strings
 - Python formats the string by replacing the name of any variable in braces with its value.
 
@@ -83,6 +91,13 @@ a, b, c = 0, 1, 2
 - input() function
   input("Enter your name: ")
 - Return an object of data type string
+
+# Numbers: Binary
+- From the integer class
+- 0bxxxxx - where 'x' is either a 0 or 1
+- Can also use the bin() function to convert an integer to binary format
+- The string format() method:
+  '{:b}.format(integer)'
 
 # Lists
 - In Python, square brackets [] indicate a list
